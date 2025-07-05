@@ -1,33 +1,20 @@
-# ccp_react_d02_q13
-
-## React Counter App
-
-This is a simple React application that demonstrates using `useState` to manage state and handle basic user interactions.
-
-### Features
-
-- **Count tracking:** Displays a count starting from 0.
-- **Increment button:** Increases the count by 1.
-- **Decrement button:** Decreases the count by 1, but prevents going below 0.
-- **Reset button:** Resets the count to 0.
-- **Goal message:** Shows "Goal Reached!" when the count reaches 10.
-
-### Code Example
-
-```jsx
 import React, { useState } from 'react';
 
 function App() {
+  // State to hold the count value
   const [count, setCount] = useState(0);
 
+  // Increment handler
   const handleIncrement = () => {
     setCount(prevCount => prevCount + 1);
   };
 
+  // Decrement handler, prevent going below 0
   const handleDecrement = () => {
     setCount(prevCount => (prevCount > 0 ? prevCount - 1 : 0));
   };
 
+  // Reset handler
   const handleReset = () => {
     setCount(0);
   };
